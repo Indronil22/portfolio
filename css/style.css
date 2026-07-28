@@ -401,10 +401,14 @@ box-shadow:0 15px 40px rgba(255,180,0,.35);
 
 border:2px solid var(--primary);
 
-color:#fff;
+color:var(--white);
 
 margin-left:15px;
 
+}
+
+body.light-theme .btn-secondary{
+    color:var(--white);
 }
 
 .btn-secondary:hover{
@@ -1480,14 +1484,17 @@ display:grid;
 
 nav{
 position:fixed;
-top:85px;
-left:-100%;
-width:280px;
-height:calc(100vh - 85px);
-background:#111;
-padding:40px;
-transition:.4s;
-border-right:1px solid var(--border);
+    top:85px;
+    left:-100%;
+    width:280px;
+    height:calc(100vh - 85px);
+    background:var(--header);
+    padding:40px;
+    transition:.4s;
+    border-right:1px solid var(--border);
+}
+body.light-theme nav{
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 nav.active{

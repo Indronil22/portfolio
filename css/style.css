@@ -20,8 +20,10 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#090909;
-    color:#ffffff;
+    background:var(--bg);
+color:var(--white);
+
+transition:.35s;
     overflow-x:hidden;
     line-height:1.7;
 }
@@ -74,6 +76,22 @@ section{
 
 --shadow:0 20px 60px rgba(0,0,0,.45);
 
+}
+/* LIGHT MODE */
+
+body.light-theme{
+
+    --bg:#f7f7f7;
+    --card:#ffffff;
+    --header:#ffffff;
+    --footer:#ffffff;
+
+    --border:#dddddd;
+
+    --white:#111111;
+    --text:#555555;
+
+    --shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
 /*==========================================
@@ -206,7 +224,7 @@ transition:.4s;
 
 header.active{
 
-background:rgba(15,15,15,.9);
+background:var(--header);
 
 backdrop-filter:blur(15px);
 
@@ -308,9 +326,8 @@ height:48px;
 
 border-radius:50%;
 
-background:#1b1b1b;
-
-color:#fff;
+background:var(--card);
+color:var(--white);
 
 cursor:pointer;
 
@@ -465,9 +482,9 @@ color:var(--text);
     position:absolute;
     inset:0;
     background:
-    radial-gradient(circle at top right, rgba(255,180,0,.18), transparent 40%),
-    radial-gradient(circle at bottom left, rgba(255,123,0,.15), transparent 40%),
-    #090909;
+radial-gradient(circle at top right,rgba(255,180,0,.18),transparent 40%),
+radial-gradient(circle at bottom left,rgba(255,123,0,.15),transparent 40%),
+var(--bg);
     z-index:-2;
 }
 
@@ -512,7 +529,7 @@ color:var(--text);
 
 .hero-left h2{
     font-size:34px;
-    color:#cfcfcf;
+    color:var(--text);
     margin-bottom:25px;
     font-weight:600;
 }
@@ -545,7 +562,7 @@ color:var(--text);
     width:52px;
     height:52px;
     border-radius:50%;
-    background:#171717;
+    background:var(--card);
     display:grid;
     place-items:center;
     font-size:22px;
@@ -1216,11 +1233,12 @@ gap:20px;
 
 .contact input,
 .contact textarea{
-background:#171717;
+background:var(--card);
+color:var(--white);
 border:1px solid var(--border);
 padding:18px 20px;
 border-radius:12px;
-color:#fff;
+
 font-size:16px;
 transition:.3s;
 }
@@ -1342,7 +1360,7 @@ FOOTER
 
 footer{
 padding:70px 0 25px;
-background:#050505;
+background:var(--footer);
 border-top:1px solid var(--border);
 margin-top:80px;
 }
@@ -1388,7 +1406,7 @@ gap:18px;
 width:48px;
 height:48px;
 border-radius:50%;
-background:#171717;
+background:var(--card);
 display:grid;
 place-items:center;
 transition:.35s;
@@ -1437,7 +1455,7 @@ width:10px;
 }
 
 ::-webkit-scrollbar-track{
-background:#111;
+background:var(--card);
 }
 
 ::-webkit-scrollbar-thumb{
@@ -1554,8 +1572,8 @@ gap:15px;
     position: fixed;
     right: 30px;
     bottom: 30px;
-    background: #111;
-    color: #fff;
+    background:var(--card);
+color:var(--white);
     padding: 18px 22px;
     border-left: 5px solid #f4b400;
     border-radius: 12px;
